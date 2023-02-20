@@ -8,7 +8,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get install -y tzdata
 
 # TODO: change this to your time zone
-ln -fs /usr/share/zoneinfo/UTC /etc/localtime
+ln -fs /usr/share/zoneinfo/Europe/Budapest /etc/localtime
 
 dpkg-reconfigure --frontend noninteractive tzdata 
 

@@ -201,7 +201,7 @@ LOGGING = {
 LANGUAGE_CODE = 'en-us'
 
 # TODO: change this to your time zone
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Budapest'
 
 USE_I18N = True
 USE_L10N = True
