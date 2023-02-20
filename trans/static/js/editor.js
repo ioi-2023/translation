@@ -109,6 +109,10 @@ function onIscMarkdownClick(){
     switchTab('isc-markdown');
 }
 
+function onReleaseLockClick(){
+    autoSave(true, releaseToken);
+}
+
 function autoSave(on_unleash=false, callback=null) {
     saveVersion(true, on_unleash, callback);
 }
@@ -219,6 +223,7 @@ function releaseToken() {
         },
         type: "POST",
         success: function (response) {
+          window.location = "/";
         },
         error: function () {
         }
