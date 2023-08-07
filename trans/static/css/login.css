@@ -2,9 +2,25 @@ html {
     height: 100%;
 }
 
+body {
+    color: white;
+}
+
+.bg-img {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .container {
-    margin-top: 130px;
-    margin-bottom: 150px;
+    padding-top: 130px;
+    padding-bottom: 150px;
+}
+
+.container h1 {
+    color: white;
+    font-weight: bold;
 }
 
 .wrapper {
@@ -17,6 +33,9 @@ html {
 .panel {
     height: 100%;
     border-radius: 0;
+
+    background-color: rgba(0,0,0, 0.1);
+    backdrop-filter: blur(24px);
 }
 
 .panel-body {

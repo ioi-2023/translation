@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 {% load staticfiles %}
 
 <html>
@@ -6,9 +6,9 @@
 <head>
     <meta charset="utf-8">
     <title>Login - {{settings.SITE_TITLE}}</title>
-    <link rel="shortcut icon" href="/static/img/favicon.png"/>
+    <link rel="shortcut icon" href="/static/img/favicon.png" />
     <meta name="description" content="Translation System for the International Olympiad in Informatics (IOI)">
-    <meta name="author" content="IOI">
+    <meta name="author" content="IOI 2023">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -23,34 +23,37 @@
 
 <body>
 
-    <div class="container">
-        <div class="wrapper">
-            <div class="panel panel-default">
-                <div class="panel-body">
+    <div class="bg-img" style="background-image: url('/static/img/gradient_smoke_bg.webp');">
 
-                    <div class="img-container">
-                        <img class="login-img" src="/static/img/logo.svg">
-                    </div>
+        <div class="container">
+            <div class="wrapper">
+                <div class="panel panel-default">
+                    <div class="panel-body">
 
-                    <h1 class="site-title">Task Translation System</h1>
-
-                    <div class="login-error">
-                        {% if login_error %}<span>wrong login information</span>{% endif %}
-                    </div>
-
-                    <form action="{% url 'login' %}" id="login_form" method="POST">
-                        {% csrf_token %}
-                        <input type="text" class="form-control" name="mail" placeholder="Username">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                        <div class="remember-me">
-                            <input type="checkbox" name="remember_me">
-                            <span>remember me</span>
-                        </div>
-                        <div class="submit-form">
-                            <input type="submit" class="btn btn-default btn-lg btn-login" value="Sign in">
+                        <div class="img-container">
+                            <img class="login-img" src="/static/img/logo.svg">
                         </div>
 
-                    </form>
+                        <h1 class="site-title">Task Translation System</h1>
+
+                        <div class="login-error">
+                            {% if login_error %}<span>wrong login information</span>{% endif %}
+                        </div>
+
+                        <form action="{% url 'login' %}" id="login_form" method="POST">
+                            {% csrf_token %}
+                            <input type="text" class="form-control" name="mail" placeholder="Username">
+                            <input type="password" class="form-control" name="password" placeholder="Password">
+                            <div class="remember-me">
+                                <input type="checkbox" name="remember_me">
+                                <span>remember me</span>
+                            </div>
+                            <div class="submit-form">
+                                <input type="submit" class="btn btn-default btn-lg btn-login" value="Sign in">
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
