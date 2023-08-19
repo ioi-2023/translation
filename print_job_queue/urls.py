@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^final_job_mark_completion/(?P<job_id>[\w]*)/$',
         FinalJobMarkCompletion.as_view(),
         name='final_job_mark_completion'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
