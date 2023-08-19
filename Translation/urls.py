@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin/login/$', FirstPage.as_view()),
     url(r'^admin/', admin.site.urls),
     url(r'^queue/', include('print_job_queue.urls')),
-    url(r'^' , include('trans.urls')),
+    url(r'^', include('trans.urls')),
 ]
